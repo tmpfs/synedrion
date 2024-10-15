@@ -60,12 +60,10 @@ impl<P: PaillierParams> SecretKeyPaillier<P> {
         let p = P::HalfUint::generate_safe_prime_with_rng(
             rng,
             P::PRIME_BITS as u32,
-            <P as PaillierParams>::HalfUint::BITS,
         );
         let q = P::HalfUint::generate_safe_prime_with_rng(
             rng,
             P::PRIME_BITS as u32,
-            <P as PaillierParams>::HalfUint::BITS,
         );
 
         Self {
